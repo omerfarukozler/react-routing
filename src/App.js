@@ -9,6 +9,7 @@ import About from './components/About';
 import Home from './components/Home';
 import Users from './components/Users';
 import User from './components/User';
+import Error404 from './components/Error404';
 function App() {
   return (
     <Router>
@@ -31,6 +32,7 @@ function App() {
         <Route path='/about' Component={About}/>
         <Route path='/users' Component={Users}/>
         <Route path='/user/:id' Component={User}/>
+        <Route path='*' Component={Error404}/>
         </Routes>
       </div>
     </Router>
