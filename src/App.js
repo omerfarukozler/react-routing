@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  NavLink
 } from 'react-router-dom';
 import About from './components/About';
 import Home from './components/Home';
@@ -16,13 +16,13 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink className={({ isActive }) => (isActive ? "active" : "")} to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink className={({ isActive }) => (isActive ? "active" : "")} to="/about">About</NavLink>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <NavLink className={({ isActive }) => (isActive ? "active" : "")} to="/users">Users</NavLink>
             </li>
           </ul>
         </nav>
